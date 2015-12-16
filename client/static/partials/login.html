@@ -1,0 +1,26 @@
+<h3>Hello</h3>
+Please enter your name to join and share your ideas!
+<br>
+
+<form name = 'usersForm'>
+	Name:<input type = 'text' name = 'name' ng-model = 'UserCtrl.userInfo.name'
+			ng-minlength = '2'
+			ng-maxlength = '20'
+			required> 
+	<br>
+	<button ng-click='UserCtrl.login()' ng-disabled ='usersForm.name.$invalid'>Login</button>
+</form>
+<div ng-messages="usersForm.name.$error" style="color:maroon" role="alert" ng-show= 'usersForm.name.$dirty'>
+    <div ng-message="required">Please enter a name!</div>
+    <div ng-message="minlength">Name must be greater than 2 characters</div>
+    <div ng-message="maxlength">Name must be less than 20 characters</div>
+</div>
+<!-- 
+user Info:{{ UserCtrl.userInfo }}
+<br>
+user: {{UserCtrl.ctrl_user }}
+<br>
+errors: {{UserCtrl.errors }}
+
+
+ -->

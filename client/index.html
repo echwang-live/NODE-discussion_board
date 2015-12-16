@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+	<title>Dashboard</title>
+	<script src="http://code.angularjs.org/1.4.0/angular.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.js"></script>
+	<script type="text/javascript" src='/static/js/app.js'></script>
+	<script type="text/javascript" src='/static/js/factories/user.js'></script>
+	<script type="text/javascript" src='/static/js/controllers/users.js'></script>
+</head>
+<body>
+<div ng-controller = "UsersController as UserCtrl">
+	<div ng-view=''>
+		
+	</div>
+</div>
+</body>
+</html>
